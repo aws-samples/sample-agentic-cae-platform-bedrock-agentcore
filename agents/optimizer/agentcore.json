@@ -1,0 +1,16 @@
+{
+  "runtime": {
+    "name": "cae-platform-optimizer",
+    "entryPoint": "main.py",
+    "codeRuntime": "PYTHON_3_13",
+    "protocol": "HTTP",
+    "networkMode": "PUBLIC",
+    "idleTimeout": 900,
+    "maxLifetime": 28800
+  },
+  "agent": {
+    "model": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "tools": "agentcore-gateway://cae-platform-gateway",
+    "memory": "agentcore-memory://cae-platform-memory"
+  }
+}

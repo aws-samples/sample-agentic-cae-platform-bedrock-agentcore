@@ -1,0 +1,15 @@
+{
+  "name": "sample-agentic-cae-platform-bedrock-agentcore",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Agentic CAE Platform monorepo: CDK infrastructure and React frontend workspaces (Python agents/tools/tests are managed via the root pyproject.toml).",
+  "workspaces": [
+    "infra",
+    "frontend",
+    "shared"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces --if-present"
+  }
+}

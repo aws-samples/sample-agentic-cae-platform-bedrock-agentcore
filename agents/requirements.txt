@@ -1,0 +1,20 @@
+# Runtime dependencies for the AgentCore Runtime container images.
+boto3>=1.34,<2
+botocore>=1.34,<2
+jsonschema>=4.22,<5
+PyJWT[crypto]>=2.8,<3
+httpx>=0.27,<1
+
+# PyMuPDF for PDF annotation extraction and zoom_and_read (QA agent built-in tools)
+PyMuPDF>=1.24,<2
+
+# MCP SDK for calling tools through the AgentCore Gateway (shared.gateway).
+mcp>=1.0.0
+
+# Strands Agents SDK for building the agents.
+strands-agents>=0.1.0
+strands-agents-tools>=0.1.0
+
+# AgentCore Runtime harness (provides bedrock_agentcore.runtime.BedrockAgentCoreApp
+# and bedrock_agentcore.memory.integrations.strands for session memory).
+bedrock-agentcore>=0.1.0

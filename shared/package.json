@@ -1,0 +1,20 @@
+{
+  "name": "@sample-agentic-cae-platform/shared",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Shared JSON Schema definitions and TypeScript validators used by the infra (CDK) and frontend workspaces.",
+  "type": "module",
+  "main": "validators/schema_validator.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --experimental-strip-types validators/schema_validator.sanity.ts"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.2",
+    "typescript": "~5.9.3"
+  }
+}

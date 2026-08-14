@@ -1,0 +1,4072 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CaePlatformStack CDK infrastructure tests (task 15.2) cdk synth snapshot synthesized template matches the committed snapshot 1`] = `
+{
+  "Outputs": {
+    "AgentCoreGatewayId": {
+      "Value": {
+        "Fn::GetAtt": [
+          "AgentCoreGateway",
+          "GatewayId",
+        ],
+      },
+    },
+    "AgentCoreGatewayUrl": {
+      "Value": {
+        "Fn::GetAtt": [
+          "AgentCoreGateway",
+          "GatewayUrl",
+        ],
+      },
+    },
+    "AgentCoreMemoryArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "AgentCoreMemory",
+          "Arn",
+        ],
+      },
+    },
+    "AgentCoreMemoryId": {
+      "Value": {
+        "Fn::GetAtt": [
+          "AgentCoreMemory",
+          "MemoryId",
+        ],
+      },
+    },
+    "AgentWorkloadIdentityArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "WorkloadIdentity",
+          "WorkloadIdentityArn",
+        ],
+      },
+    },
+    "CloudFrontDomainName": {
+      "Value": {
+        "Fn::GetAtt": [
+          "Distribution830FAC52",
+          "DomainName",
+        ],
+      },
+    },
+    "CognitoAppClientId": {
+      "Value": {
+        "Ref": "UserPoolClient2F5918F7",
+      },
+    },
+    "CognitoUserPoolId": {
+      "Value": {
+        "Ref": "UserPool6BA7E5F2",
+      },
+    },
+    "ExtractionRuntimeArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ExtractionRuntime",
+          "AgentRuntimeArn",
+        ],
+      },
+    },
+    "ExtractionRuntimeEndpointArn": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            {
+              "Fn::GetAtt": [
+                "ExtractionRuntime",
+                "AgentRuntimeArn",
+              ],
+            },
+            "/runtime-endpoint/DEFAULT",
+          ],
+        ],
+      },
+    },
+    "ExtractionRuntimeId": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ExtractionRuntime",
+          "AgentRuntimeId",
+        ],
+      },
+    },
+    "KnowledgeBaseId": {
+      "Value": {
+        "Fn::GetAtt": [
+          "KnowledgeBase",
+          "KnowledgeBaseId",
+        ],
+      },
+    },
+    "NeptuneGraphId": {
+      "Value": {
+        "Fn::GetAtt": [
+          "NeptuneGraph",
+          "GraphId",
+        ],
+      },
+    },
+    "OptimizerRuntimeArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "OptimizerRuntime",
+          "AgentRuntimeArn",
+        ],
+      },
+    },
+    "OptimizerRuntimeEndpointArn": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            {
+              "Fn::GetAtt": [
+                "OptimizerRuntime",
+                "AgentRuntimeArn",
+              ],
+            },
+            "/runtime-endpoint/DEFAULT",
+          ],
+        ],
+      },
+    },
+    "OptimizerRuntimeId": {
+      "Value": {
+        "Fn::GetAtt": [
+          "OptimizerRuntime",
+          "AgentRuntimeId",
+        ],
+      },
+    },
+    "OrchestratorRuntimeArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "OrchestratorRuntime",
+          "AgentRuntimeArn",
+        ],
+      },
+    },
+    "OrchestratorRuntimeEndpointArn": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            {
+              "Fn::GetAtt": [
+                "OrchestratorRuntime",
+                "AgentRuntimeArn",
+              ],
+            },
+            "/runtime-endpoint/DEFAULT",
+          ],
+        ],
+      },
+    },
+    "OrchestratorRuntimeId": {
+      "Value": {
+        "Fn::GetAtt": [
+          "OrchestratorRuntime",
+          "AgentRuntimeId",
+        ],
+      },
+    },
+    "QaRuntimeArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "QaRuntime",
+          "AgentRuntimeArn",
+        ],
+      },
+    },
+    "QaRuntimeEndpointArn": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            {
+              "Fn::GetAtt": [
+                "QaRuntime",
+                "AgentRuntimeArn",
+              ],
+            },
+            "/runtime-endpoint/DEFAULT",
+          ],
+        ],
+      },
+    },
+    "QaRuntimeId": {
+      "Value": {
+        "Fn::GetAtt": [
+          "QaRuntime",
+          "AgentRuntimeId",
+        ],
+      },
+    },
+    "SagemakerCredentialProviderArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "OAuth2CredentialProvider",
+          "CredentialProviderArn",
+        ],
+      },
+    },
+    "UploadApiEndpoint": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "HttpApi",
+            },
+            ".execute-api.us-east-1.amazonaws.com",
+          ],
+        ],
+      },
+    },
+    "WebSocketEndpoint": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "wss://",
+            {
+              "Ref": "WebSocketApi",
+            },
+            ".execute-api.us-east-1.amazonaws.com/dev",
+          ],
+        ],
+      },
+    },
+  },
+  "Parameters": {
+    "BootstrapVersion": {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": {
+    "AgentCoreGateway": {
+      "Properties": {
+        "AuthorizerType": "AWS_IAM",
+        "Name": "cae-platform-gateway",
+        "ProtocolConfiguration": {
+          "Mcp": {
+            "Instructions": "Engineering drawing analysis and design optimization platform",
+            "SearchType": "SEMANTIC",
+          },
+        },
+        "ProtocolType": "MCP",
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "GatewayExecutionRole16B5E8DF",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::Gateway",
+    },
+    "AgentCoreMemory": {
+      "Properties": {
+        "EventExpiryDuration": 90,
+        "MemoryStrategies": [
+          {
+            "SemanticMemoryStrategy": {
+              "ContentType": "TEXT",
+              "Description": "Semantic index of extracted drawing entities and specifications",
+              "Model": "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0",
+              "Name": "drawing_entities",
+              "Namespace": "drawings",
+            },
+          },
+          {
+            "UserPreferenceMemoryStrategy": {
+              "Description": "User optimization preferences and constraints",
+              "Name": "optimization_preferences",
+              "Namespace": "preferences",
+            },
+          },
+        ],
+        "Name": "cae_platform_memory",
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "MemoryExecutionRole36014876",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::Memory",
+    },
+    "CadqueryGenToolTargetEC7866D1": {
+      "DependsOn": [
+        "CadqueryGenToolTargetServiceRoleDefaultPolicy971B66C6",
+        "CadqueryGenToolTargetServiceRole25BB4AEC",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "39804da5eb2a634ad0519c2f8dbe14f449d434d4bd6738aedcd1fe355fe15970.zip",
+        },
+        "Handler": "handler.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "CadqueryGenToolTargetServiceRole25BB4AEC",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 120,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "CadqueryGenToolTargetServiceRole25BB4AEC": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "CadqueryGenToolTargetServiceRoleDefaultPolicy971B66C6": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject",
+                "s3:PutObjectLegalHold",
+                "s3:PutObjectRetention",
+                "s3:PutObjectTagging",
+                "s3:PutObjectVersionTagging",
+                "s3:Abort*",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ModelsBucketA3610ED4",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ModelsBucketA3610ED4",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "CadqueryGenToolTargetServiceRoleDefaultPolicy971B66C6",
+        "Roles": [
+          {
+            "Ref": "CadqueryGenToolTargetServiceRole25BB4AEC",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ComplianceToolTargetF69A62E7": {
+      "DependsOn": [
+        "ComplianceToolTargetServiceRoleDefaultPolicy82B32BB4",
+        "ComplianceToolTargetServiceRoleE870BA94",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "4aee9832acdaa28ee998becdc11d0281088a73ae55158d00b7e51a10a0159f19.zip",
+        },
+        "Handler": "handler.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "ComplianceToolTargetServiceRoleE870BA94",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 120,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "ComplianceToolTargetServiceRoleDefaultPolicy82B32BB4": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "DrawingsBucket74C4D09B",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "DrawingsBucket74C4D09B",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ComplianceToolTargetServiceRoleDefaultPolicy82B32BB4",
+        "Roles": [
+          {
+            "Ref": "ComplianceToolTargetServiceRoleE870BA94",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ComplianceToolTargetServiceRoleE870BA94": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ConnectionsTable8000B8A1": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "connectionId",
+            "AttributeType": "S",
+          },
+          {
+            "AttributeName": "userId",
+            "AttributeType": "S",
+          },
+        ],
+        "BillingMode": "PAY_PER_REQUEST",
+        "GlobalSecondaryIndexes": [
+          {
+            "IndexName": "userId-index",
+            "KeySchema": [
+              {
+                "AttributeName": "userId",
+                "KeyType": "HASH",
+              },
+            ],
+            "Projection": {
+              "ProjectionType": "ALL",
+            },
+          },
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "connectionId",
+            "KeyType": "HASH",
+          },
+        ],
+        "TimeToLiveSpecification": {
+          "AttributeName": "expiresAt",
+          "Enabled": true,
+        },
+      },
+      "Type": "AWS::DynamoDB::Table",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "ConstraintValidatorToolTarget18F30C74": {
+      "DependsOn": [
+        "ConstraintValidatorToolTargetServiceRoleDefaultPolicy1ACB62AF",
+        "ConstraintValidatorToolTargetServiceRole0A4B3D3A",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "39b3d0ac2f4778fad64d0ebb12d3757ecf63a3b8022e851f7bda49676cfdf232.zip",
+        },
+        "Handler": "handler.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "ConstraintValidatorToolTargetServiceRole0A4B3D3A",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 120,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "ConstraintValidatorToolTargetServiceRole0A4B3D3A": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ConstraintValidatorToolTargetServiceRoleDefaultPolicy1ACB62AF": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "DrawingsBucket74C4D09B",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "DrawingsBucket74C4D09B",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ConstraintValidatorToolTargetServiceRoleDefaultPolicy1ACB62AF",
+        "Roles": [
+          {
+            "Ref": "ConstraintValidatorToolTargetServiceRole0A4B3D3A",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F": {
+      "DependsOn": [
+        "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6.zip",
+        },
+        "Description": {
+          "Fn::Join": [
+            "",
+            [
+              "Lambda function for auto-deleting objects in ",
+              {
+                "Ref": "DrawingsBucket74C4D09B",
+              },
+              " S3 bucket.",
+            ],
+          ],
+        },
+        "Handler": "index.handler",
+        "MemorySize": 128,
+        "Role": {
+          "Fn::GetAtt": [
+            "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs24.x",
+        "Timeout": 900,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Sub": "arn:\${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "Distribution830FAC52": {
+      "Properties": {
+        "DistributionConfig": {
+          "CacheBehaviors": [
+            {
+              "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+              "Compress": true,
+              "PathPattern": "models/*",
+              "TargetOriginId": "CdkInfraTestStackDistributionOrigin2CDFFBED7",
+              "ViewerProtocolPolicy": "redirect-to-https",
+            },
+          ],
+          "DefaultCacheBehavior": {
+            "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+            "Compress": true,
+            "TargetOriginId": "CdkInfraTestStackDistributionOrigin1888206A6",
+            "ViewerProtocolPolicy": "redirect-to-https",
+          },
+          "DefaultRootObject": "index.html",
+          "Enabled": true,
+          "HttpVersion": "http2",
+          "IPV6Enabled": true,
+          "Origins": [
+            {
+              "DomainName": {
+                "Fn::GetAtt": [
+                  "FrontendBucketEFE2E19C",
+                  "RegionalDomainName",
+                ],
+              },
+              "Id": "CdkInfraTestStackDistributionOrigin1888206A6",
+              "OriginAccessControlId": {
+                "Fn::GetAtt": [
+                  "DistributionOrigin1S3OriginAccessControlEB606076",
+                  "Id",
+                ],
+              },
+              "S3OriginConfig": {
+                "OriginAccessIdentity": "",
+              },
+            },
+            {
+              "DomainName": {
+                "Fn::GetAtt": [
+                  "ModelsBucketA3610ED4",
+                  "RegionalDomainName",
+                ],
+              },
+              "Id": "CdkInfraTestStackDistributionOrigin2CDFFBED7",
+              "OriginAccessControlId": {
+                "Fn::GetAtt": [
+                  "DistributionOrigin2S3OriginAccessControlDC470594",
+                  "Id",
+                ],
+              },
+              "S3OriginConfig": {
+                "OriginAccessIdentity": "",
+              },
+            },
+          ],
+        },
+      },
+      "Type": "AWS::CloudFront::Distribution",
+    },
+    "DistributionOrigin1S3OriginAccessControlEB606076": {
+      "Properties": {
+        "OriginAccessControlConfig": {
+          "Name": "CdkInfraTestStackDistributioOrigin1S3OriginAccessControlF82BA57B",
+          "OriginAccessControlOriginType": "s3",
+          "SigningBehavior": "always",
+          "SigningProtocol": "sigv4",
+        },
+      },
+      "Type": "AWS::CloudFront::OriginAccessControl",
+    },
+    "DistributionOrigin2S3OriginAccessControlDC470594": {
+      "Properties": {
+        "OriginAccessControlConfig": {
+          "Name": "CdkInfraTestStackDistributioOrigin2S3OriginAccessControlA8927AAA",
+          "OriginAccessControlOriginType": "s3",
+          "SigningBehavior": "always",
+          "SigningProtocol": "sigv4",
+        },
+      },
+      "Type": "AWS::CloudFront::OriginAccessControl",
+    },
+    "DrawingsBucket74C4D09B": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "aws-cdk:auto-delete-objects",
+            "Value": "true",
+          },
+        ],
+      },
+      "Type": "AWS::S3::Bucket",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "DrawingsBucketAutoDeleteObjectsCustomResource124BC3AA": {
+      "DeletionPolicy": "Delete",
+      "DependsOn": [
+        "DrawingsBucketPolicyBE4A11C4",
+      ],
+      "Properties": {
+        "BucketName": {
+          "Ref": "DrawingsBucket74C4D09B",
+        },
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "Custom::S3AutoDeleteObjects",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "DrawingsBucketPolicyBE4A11C4": {
+      "Properties": {
+        "Bucket": {
+          "Ref": "DrawingsBucket74C4D09B",
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:PutBucketPolicy",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+                    "Arn",
+                  ],
+                },
+              },
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "DrawingsBucket74C4D09B",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "DrawingsBucket74C4D09B",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::S3::BucketPolicy",
+    },
+    "ExtractionRuntime": {
+      "Properties": {
+        "AgentRuntimeArtifact": {
+          "ContainerConfiguration": {
+            "ContainerUri": "123456789012.dkr.ecr.us-east-1.amazonaws.com/cae-platform-extraction:latest",
+          },
+        },
+        "AgentRuntimeName": "cae_platform_extraction",
+        "LifecycleConfiguration": {
+          "IdleRuntimeSessionTimeout": 900,
+          "MaxLifetime": 28800,
+        },
+        "NetworkConfiguration": {
+          "NetworkMode": "PUBLIC",
+        },
+        "ProtocolConfiguration": "HTTP",
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "ExtractionRuntimeRole03027BF0",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::Runtime",
+    },
+    "ExtractionRuntimeRole03027BF0": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "bedrock-agentcore.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "RoleName": "cae-platform-agent-extraction-dev",
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ExtractionRuntimeRoleDefaultPolicy165A7DB5": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "bedrock:InvokeModel",
+                "bedrock:InvokeModelWithResponseStream",
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:bedrock:us-east-1::foundation-model/*",
+            },
+            {
+              "Action": "bedrock-agentcore:InvokeGateway",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "AgentCoreGateway",
+                  "Arn",
+                ],
+              },
+            },
+            {
+              "Action": "ecr:GetAuthorizationToken",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+            {
+              "Action": [
+                "ecr:BatchGetImage",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchCheckLayerAvailability",
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:ecr:us-east-1:123456789012:repository/cae-platform-extraction",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ExtractionRuntimeRoleDefaultPolicy165A7DB5",
+        "Roles": [
+          {
+            "Ref": "ExtractionRuntimeRole03027BF0",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "FrontendBucketAutoDeleteObjectsCustomResourceDB860B32": {
+      "DeletionPolicy": "Delete",
+      "DependsOn": [
+        "FrontendBucketPolicy1DFF75D9",
+      ],
+      "Properties": {
+        "BucketName": {
+          "Ref": "FrontendBucketEFE2E19C",
+        },
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "Custom::S3AutoDeleteObjects",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "FrontendBucketEFE2E19C": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "aws-cdk:auto-delete-objects",
+            "Value": "true",
+          },
+        ],
+      },
+      "Type": "AWS::S3::Bucket",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "FrontendBucketPolicy1DFF75D9": {
+      "Properties": {
+        "Bucket": {
+          "Ref": "FrontendBucketEFE2E19C",
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:PutBucketPolicy",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+                    "Arn",
+                  ],
+                },
+              },
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "FrontendBucketEFE2E19C",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "FrontendBucketEFE2E19C",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "s3:GetObject",
+              "Condition": {
+                "StringEquals": {
+                  "AWS:SourceArn": {
+                    "Fn::Join": [
+                      "",
+                      [
+                        "arn:",
+                        {
+                          "Ref": "AWS::Partition",
+                        },
+                        ":cloudfront::",
+                        {
+                          "Ref": "AWS::AccountId",
+                        },
+                        ":distribution/",
+                        {
+                          "Ref": "Distribution830FAC52",
+                        },
+                      ],
+                    ],
+                  },
+                },
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "cloudfront.amazonaws.com",
+              },
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "FrontendBucketEFE2E19C",
+                        "Arn",
+                      ],
+                    },
+                    "/*",
+                  ],
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::S3::BucketPolicy",
+    },
+    "GatewayExecutionPolicyED835B8B": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "KbRetrievalToolTarget0E4B4529",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::GetAtt": [
+                    "VisionZoomToolTarget7A98DAC1",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::GetAtt": [
+                    "PdfAnnotationsToolTargetCCC12593",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::GetAtt": [
+                    "ComplianceToolTargetF69A62E7",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::GetAtt": [
+                    "OptimizerToolTargetC63E14E8",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::GetAtt": [
+                    "CadqueryGenToolTargetEC7866D1",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::GetAtt": [
+                    "ConstraintValidatorToolTarget18F30C74",
+                    "Arn",
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "GatewayExecutionPolicyED835B8B",
+        "Roles": [
+          {
+            "Ref": "GatewayExecutionRole16B5E8DF",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "GatewayExecutionRole16B5E8DF": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "bedrock-agentcore.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "GatewayTargetCadqueryGen": {
+      "Properties": {
+        "GatewayIdentifier": {
+          "Fn::GetAtt": [
+            "AgentCoreGateway",
+            "GatewayId",
+          ],
+        },
+        "Name": "generate_3d",
+        "TargetConfiguration": {
+          "LambdaTargetConfiguration": {
+            "LambdaArn": {
+              "Fn::GetAtt": [
+                "CadqueryGenToolTargetEC7866D1",
+                "Arn",
+              ],
+            },
+          },
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::GatewayTarget",
+    },
+    "GatewayTargetCompliance": {
+      "Properties": {
+        "GatewayIdentifier": {
+          "Fn::GetAtt": [
+            "AgentCoreGateway",
+            "GatewayId",
+          ],
+        },
+        "Name": "compliance",
+        "TargetConfiguration": {
+          "LambdaTargetConfiguration": {
+            "LambdaArn": {
+              "Fn::GetAtt": [
+                "ComplianceToolTargetF69A62E7",
+                "Arn",
+              ],
+            },
+          },
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::GatewayTarget",
+    },
+    "GatewayTargetConstraintValidator": {
+      "Properties": {
+        "GatewayIdentifier": {
+          "Fn::GetAtt": [
+            "AgentCoreGateway",
+            "GatewayId",
+          ],
+        },
+        "Name": "validate_constraints",
+        "TargetConfiguration": {
+          "LambdaTargetConfiguration": {
+            "LambdaArn": {
+              "Fn::GetAtt": [
+                "ConstraintValidatorToolTarget18F30C74",
+                "Arn",
+              ],
+            },
+          },
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::GatewayTarget",
+    },
+    "GatewayTargetKbRetrieval": {
+      "Properties": {
+        "GatewayIdentifier": {
+          "Fn::GetAtt": [
+            "AgentCoreGateway",
+            "GatewayId",
+          ],
+        },
+        "Name": "retrieve",
+        "TargetConfiguration": {
+          "LambdaTargetConfiguration": {
+            "LambdaArn": {
+              "Fn::GetAtt": [
+                "KbRetrievalToolTarget0E4B4529",
+                "Arn",
+              ],
+            },
+          },
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::GatewayTarget",
+    },
+    "GatewayTargetOptimizer": {
+      "Properties": {
+        "GatewayIdentifier": {
+          "Fn::GetAtt": [
+            "AgentCoreGateway",
+            "GatewayId",
+          ],
+        },
+        "Name": "optimize",
+        "TargetConfiguration": {
+          "LambdaTargetConfiguration": {
+            "LambdaArn": {
+              "Fn::GetAtt": [
+                "OptimizerToolTargetC63E14E8",
+                "Arn",
+              ],
+            },
+          },
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::GatewayTarget",
+    },
+    "GatewayTargetPdfAnnotations": {
+      "Properties": {
+        "GatewayIdentifier": {
+          "Fn::GetAtt": [
+            "AgentCoreGateway",
+            "GatewayId",
+          ],
+        },
+        "Name": "annotations",
+        "TargetConfiguration": {
+          "LambdaTargetConfiguration": {
+            "LambdaArn": {
+              "Fn::GetAtt": [
+                "PdfAnnotationsToolTargetCCC12593",
+                "Arn",
+              ],
+            },
+          },
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::GatewayTarget",
+    },
+    "GatewayTargetVisionZoom": {
+      "Properties": {
+        "GatewayIdentifier": {
+          "Fn::GetAtt": [
+            "AgentCoreGateway",
+            "GatewayId",
+          ],
+        },
+        "Name": "zoom_and_read",
+        "TargetConfiguration": {
+          "LambdaTargetConfiguration": {
+            "LambdaArn": {
+              "Fn::GetAtt": [
+                "VisionZoomToolTarget7A98DAC1",
+                "Arn",
+              ],
+            },
+          },
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::GatewayTarget",
+    },
+    "HttpApi": {
+      "Properties": {
+        "Name": "cae-platform-http-dev",
+        "ProtocolType": "HTTP",
+      },
+      "Type": "AWS::ApiGatewayV2::Api",
+    },
+    "HttpApiStage": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "HttpApi",
+        },
+        "AutoDeploy": true,
+        "StageName": "$default",
+      },
+      "Type": "AWS::ApiGatewayV2::Stage",
+    },
+    "JwtAuthorizer": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "HttpApi",
+        },
+        "AuthorizerType": "JWT",
+        "IdentitySource": [
+          "$request.header.Authorization",
+        ],
+        "JwtConfiguration": {
+          "Audience": [
+            {
+              "Ref": "UserPoolClient2F5918F7",
+            },
+          ],
+          "Issuer": {
+            "Fn::Join": [
+              "",
+              [
+                "https://cognito-idp.us-east-1.amazonaws.com/",
+                {
+                  "Ref": "UserPool6BA7E5F2",
+                },
+              ],
+            ],
+          },
+        },
+        "Name": "CognitoJwtAuthorizer",
+      },
+      "Type": "AWS::ApiGatewayV2::Authorizer",
+    },
+    "KbRetrievalToolTarget0E4B4529": {
+      "DependsOn": [
+        "KbRetrievalToolTargetServiceRoleDefaultPolicyACBE93BA",
+        "KbRetrievalToolTargetServiceRoleD3782383",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "e0b8b58ef169b50d7c5e4bfb0366315f2120752867cfba175cf3aa7d10a929bf.zip",
+        },
+        "Handler": "handler.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "KbRetrievalToolTargetServiceRoleD3782383",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 120,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "KbRetrievalToolTargetServiceRoleD3782383": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "KbRetrievalToolTargetServiceRoleDefaultPolicyACBE93BA": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "DrawingsBucket74C4D09B",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "DrawingsBucket74C4D09B",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "KbRetrievalToolTargetServiceRoleDefaultPolicyACBE93BA",
+        "Roles": [
+          {
+            "Ref": "KbRetrievalToolTargetServiceRoleD3782383",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "KnowledgeBase": {
+      "DependsOn": [
+        "NeptuneGraph",
+      ],
+      "Properties": {
+        "KnowledgeBaseConfiguration": {
+          "Type": "VECTOR",
+          "VectorKnowledgeBaseConfiguration": {
+            "EmbeddingModelArn": "arn:aws:bedrock:us-east-1::foundation-model/amazon.titan-embed-text-v2:0",
+            "EmbeddingModelConfiguration": {
+              "BedrockEmbeddingModelConfiguration": {
+                "Dimensions": 1024,
+              },
+            },
+          },
+        },
+        "Name": "cae-platform-kb-dev",
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "KnowledgeBaseRoleA2B317B9",
+            "Arn",
+          ],
+        },
+        "StorageConfiguration": {
+          "NeptuneAnalyticsConfiguration": {
+            "FieldMapping": {
+              "MetadataField": "metadata",
+              "TextField": "text",
+            },
+            "GraphArn": {
+              "Fn::GetAtt": [
+                "NeptuneGraph",
+                "GraphArn",
+              ],
+            },
+          },
+          "Type": "NEPTUNE_ANALYTICS",
+        },
+      },
+      "Type": "AWS::Bedrock::KnowledgeBase",
+    },
+    "KnowledgeBaseDataSource": {
+      "Properties": {
+        "DataDeletionPolicy": "DELETE",
+        "DataSourceConfiguration": {
+          "S3Configuration": {
+            "BucketArn": {
+              "Fn::GetAtt": [
+                "DrawingsBucket74C4D09B",
+                "Arn",
+              ],
+            },
+            "InclusionPrefixes": [
+              "ground-truth/",
+            ],
+          },
+          "Type": "S3",
+        },
+        "KnowledgeBaseId": {
+          "Fn::GetAtt": [
+            "KnowledgeBase",
+            "KnowledgeBaseId",
+          ],
+        },
+        "Name": "cae-platform-drawings-ds-dev",
+        "VectorIngestionConfiguration": {
+          "ContextEnrichmentConfiguration": {
+            "BedrockFoundationModelConfiguration": {
+              "EnrichmentStrategyConfiguration": {
+                "Method": "CHUNK_ENTITY_EXTRACTION",
+              },
+              "ModelArn": "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0",
+            },
+            "Type": "BEDROCK_FOUNDATION_MODEL",
+          },
+          "ParsingConfiguration": {
+            "BedrockFoundationModelConfiguration": {
+              "ModelArn": "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0",
+            },
+            "ParsingStrategy": "BEDROCK_FOUNDATION_MODEL",
+          },
+        },
+      },
+      "Type": "AWS::Bedrock::DataSource",
+    },
+    "KnowledgeBasePolicyC27E5132": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "neptune-graph:ReadDataViaQuery",
+                "neptune-graph:WriteDataViaQuery",
+                "neptune-graph:DeleteDataViaQuery",
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "NeptuneGraph",
+                  "GraphArn",
+                ],
+              },
+            },
+            {
+              "Action": [
+                "s3:GetObject",
+                "s3:ListBucket",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "DrawingsBucket74C4D09B",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "DrawingsBucket74C4D09B",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "bedrock:InvokeModel",
+              "Effect": "Allow",
+              "Resource": "arn:aws:bedrock:us-east-1::foundation-model/*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "KnowledgeBasePolicyC27E5132",
+        "Roles": [
+          {
+            "Ref": "KnowledgeBaseRoleA2B317B9",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "KnowledgeBaseRoleA2B317B9": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "bedrock.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "MemoryExecutionPolicyA0C37C23": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "bedrock:InvokeModel",
+              "Effect": "Allow",
+              "Resource": "arn:aws:bedrock:us-east-1::foundation-model/*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "MemoryExecutionPolicyA0C37C23",
+        "Roles": [
+          {
+            "Ref": "MemoryExecutionRole36014876",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "MemoryExecutionRole36014876": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "bedrock-agentcore.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ModelsBucketA3610ED4": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "aws-cdk:auto-delete-objects",
+            "Value": "true",
+          },
+        ],
+      },
+      "Type": "AWS::S3::Bucket",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "ModelsBucketAutoDeleteObjectsCustomResource522ADE49": {
+      "DeletionPolicy": "Delete",
+      "DependsOn": [
+        "ModelsBucketPolicy70B509CA",
+      ],
+      "Properties": {
+        "BucketName": {
+          "Ref": "ModelsBucketA3610ED4",
+        },
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "Custom::S3AutoDeleteObjects",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "ModelsBucketPolicy70B509CA": {
+      "Properties": {
+        "Bucket": {
+          "Ref": "ModelsBucketA3610ED4",
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:PutBucketPolicy",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+                    "Arn",
+                  ],
+                },
+              },
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ModelsBucketA3610ED4",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ModelsBucketA3610ED4",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "s3:GetObject",
+              "Condition": {
+                "StringEquals": {
+                  "AWS:SourceArn": {
+                    "Fn::Join": [
+                      "",
+                      [
+                        "arn:",
+                        {
+                          "Ref": "AWS::Partition",
+                        },
+                        ":cloudfront::",
+                        {
+                          "Ref": "AWS::AccountId",
+                        },
+                        ":distribution/",
+                        {
+                          "Ref": "Distribution830FAC52",
+                        },
+                      ],
+                    ],
+                  },
+                },
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "cloudfront.amazonaws.com",
+              },
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "ModelsBucketA3610ED4",
+                        "Arn",
+                      ],
+                    },
+                    "/*",
+                  ],
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::S3::BucketPolicy",
+    },
+    "NeptuneGraph": {
+      "Properties": {
+        "DeletionProtection": false,
+        "GraphName": "cae-platform-graph-dev",
+        "ProvisionedMemory": 16,
+        "PublicConnectivity": false,
+        "ReplicaCount": 0,
+        "VectorSearchConfiguration": {
+          "VectorSearchDimension": 1024,
+        },
+      },
+      "Type": "AWS::NeptuneGraph::Graph",
+    },
+    "OAuth2CredentialProvider": {
+      "Properties": {
+        "CredentialProviderVendor": "CustomOauth2",
+        "Name": "sagemaker-access",
+        "Oauth2ProviderConfigInput": {
+          "CustomOauth2ProviderConfig": {
+            "OauthDiscoveryUrl": {
+              "Fn::Join": [
+                "",
+                [
+                  "https://cognito-idp.us-east-1.amazonaws.com/",
+                  {
+                    "Ref": "UserPool6BA7E5F2",
+                  },
+                  "/.well-known/openid-configuration",
+                ],
+              ],
+            },
+          },
+        },
+        "WorkloadIdentityArn": {
+          "Fn::GetAtt": [
+            "WorkloadIdentity",
+            "WorkloadIdentityArn",
+          ],
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::OAuth2CredentialProvider",
+    },
+    "OptimizationHistoryTable56AF5B3F": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "userId",
+            "AttributeType": "S",
+          },
+          {
+            "AttributeName": "sessionId#timestamp",
+            "AttributeType": "S",
+          },
+        ],
+        "BillingMode": "PAY_PER_REQUEST",
+        "KeySchema": [
+          {
+            "AttributeName": "userId",
+            "KeyType": "HASH",
+          },
+          {
+            "AttributeName": "sessionId#timestamp",
+            "KeyType": "RANGE",
+          },
+        ],
+        "TimeToLiveSpecification": {
+          "AttributeName": "expiresAt",
+          "Enabled": true,
+        },
+      },
+      "Type": "AWS::DynamoDB::Table",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "OptimizerRuntime": {
+      "Properties": {
+        "AgentRuntimeArtifact": {
+          "ContainerConfiguration": {
+            "ContainerUri": "123456789012.dkr.ecr.us-east-1.amazonaws.com/cae-platform-optimizer:latest",
+          },
+        },
+        "AgentRuntimeName": "cae_platform_optimizer",
+        "LifecycleConfiguration": {
+          "IdleRuntimeSessionTimeout": 900,
+          "MaxLifetime": 28800,
+        },
+        "NetworkConfiguration": {
+          "NetworkMode": "PUBLIC",
+        },
+        "ProtocolConfiguration": "HTTP",
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "OptimizerRuntimeRole377A1781",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::Runtime",
+    },
+    "OptimizerRuntimeRole377A1781": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "bedrock-agentcore.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "RoleName": "cae-platform-agent-optimizer-dev",
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "OptimizerRuntimeRoleDefaultPolicy6B0369D9": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "bedrock:InvokeModel",
+                "bedrock:InvokeModelWithResponseStream",
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:bedrock:us-east-1::foundation-model/*",
+            },
+            {
+              "Action": "bedrock-agentcore:InvokeGateway",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "AgentCoreGateway",
+                  "Arn",
+                ],
+              },
+            },
+            {
+              "Action": "ecr:GetAuthorizationToken",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+            {
+              "Action": [
+                "ecr:BatchGetImage",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchCheckLayerAvailability",
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:ecr:us-east-1:123456789012:repository/cae-platform-optimizer",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "OptimizerRuntimeRoleDefaultPolicy6B0369D9",
+        "Roles": [
+          {
+            "Ref": "OptimizerRuntimeRole377A1781",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "OptimizerToolTargetC63E14E8": {
+      "DependsOn": [
+        "OptimizerToolTargetServiceRoleDefaultPolicyE7221D82",
+        "OptimizerToolTargetServiceRole1EABDBBB",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "8693a11d965caff36e731c8e2f88eb09d2a45d902334b04c36a399cffc8af44b.zip",
+        },
+        "Handler": "handler.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "OptimizerToolTargetServiceRole1EABDBBB",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 120,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "OptimizerToolTargetServiceRole1EABDBBB": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "OptimizerToolTargetServiceRoleDefaultPolicyE7221D82": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:DescribeTable",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "OptimizationHistoryTable56AF5B3F",
+                    "Arn",
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "OptimizerToolTargetServiceRoleDefaultPolicyE7221D82",
+        "Roles": [
+          {
+            "Ref": "OptimizerToolTargetServiceRole1EABDBBB",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "OrchestratorRuntime": {
+      "Properties": {
+        "AgentRuntimeArtifact": {
+          "ContainerConfiguration": {
+            "ContainerUri": "123456789012.dkr.ecr.us-east-1.amazonaws.com/cae-platform-orchestrator:latest",
+          },
+        },
+        "AgentRuntimeName": "cae_platform_orchestrator",
+        "LifecycleConfiguration": {
+          "IdleRuntimeSessionTimeout": 900,
+          "MaxLifetime": 28800,
+        },
+        "NetworkConfiguration": {
+          "NetworkMode": "PUBLIC",
+        },
+        "ProtocolConfiguration": "HTTP",
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "OrchestratorRuntimeRoleDE674945",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::Runtime",
+    },
+    "OrchestratorRuntimeRoleDE674945": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "bedrock-agentcore.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "RoleName": "cae-platform-agent-orchestrator-dev",
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "OrchestratorRuntimeRoleDefaultPolicy7FD833E3": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "bedrock:InvokeModel",
+                "bedrock:InvokeModelWithResponseStream",
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:bedrock:us-east-1::foundation-model/*",
+            },
+            {
+              "Action": "bedrock-agentcore:InvokeGateway",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "AgentCoreGateway",
+                  "Arn",
+                ],
+              },
+            },
+            {
+              "Action": "ecr:GetAuthorizationToken",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+            {
+              "Action": [
+                "ecr:BatchGetImage",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchCheckLayerAvailability",
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:ecr:us-east-1:123456789012:repository/cae-platform-orchestrator",
+            },
+            {
+              "Action": "bedrock-agentcore:InvokeAgentRuntime",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ExtractionRuntime",
+                    "AgentRuntimeArn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ExtractionRuntime",
+                          "AgentRuntimeArn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+                {
+                  "Fn::GetAtt": [
+                    "QaRuntime",
+                    "AgentRuntimeArn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "QaRuntime",
+                          "AgentRuntimeArn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+                {
+                  "Fn::GetAtt": [
+                    "OptimizerRuntime",
+                    "AgentRuntimeArn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "OptimizerRuntime",
+                          "AgentRuntimeArn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "OrchestratorRuntimeRoleDefaultPolicy7FD833E3",
+        "Roles": [
+          {
+            "Ref": "OrchestratorRuntimeRoleDE674945",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "PdfAnnotationsToolTargetCCC12593": {
+      "DependsOn": [
+        "PdfAnnotationsToolTargetServiceRoleDefaultPolicyCE1A45C8",
+        "PdfAnnotationsToolTargetServiceRole258332B2",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "478e540ed62512143f7c24e515ece58474e20404a20285036fcb06fddd331325.zip",
+        },
+        "Handler": "handler.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "PdfAnnotationsToolTargetServiceRole258332B2",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 120,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "PdfAnnotationsToolTargetServiceRole258332B2": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "PdfAnnotationsToolTargetServiceRoleDefaultPolicyCE1A45C8": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "DrawingsBucket74C4D09B",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "DrawingsBucket74C4D09B",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "PdfAnnotationsToolTargetServiceRoleDefaultPolicyCE1A45C8",
+        "Roles": [
+          {
+            "Ref": "PdfAnnotationsToolTargetServiceRole258332B2",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "QaRuntime": {
+      "Properties": {
+        "AgentRuntimeArtifact": {
+          "ContainerConfiguration": {
+            "ContainerUri": "123456789012.dkr.ecr.us-east-1.amazonaws.com/cae-platform-qa:latest",
+          },
+        },
+        "AgentRuntimeName": "cae_platform_qa",
+        "LifecycleConfiguration": {
+          "IdleRuntimeSessionTimeout": 900,
+          "MaxLifetime": 28800,
+        },
+        "NetworkConfiguration": {
+          "NetworkMode": "PUBLIC",
+        },
+        "ProtocolConfiguration": "HTTP",
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "QaRuntimeRole37614E7E",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::BedrockAgentCore::Runtime",
+    },
+    "QaRuntimeRole37614E7E": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "bedrock-agentcore.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "RoleName": "cae-platform-agent-qa-dev",
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "QaRuntimeRoleDefaultPolicy31AE0D8E": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "bedrock:InvokeModel",
+                "bedrock:InvokeModelWithResponseStream",
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:bedrock:us-east-1::foundation-model/*",
+            },
+            {
+              "Action": "bedrock-agentcore:InvokeGateway",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "AgentCoreGateway",
+                  "Arn",
+                ],
+              },
+            },
+            {
+              "Action": "ecr:GetAuthorizationToken",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+            {
+              "Action": [
+                "ecr:BatchGetImage",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchCheckLayerAvailability",
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:ecr:us-east-1:123456789012:repository/cae-platform-qa",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "QaRuntimeRoleDefaultPolicy31AE0D8E",
+        "Roles": [
+          {
+            "Ref": "QaRuntimeRole37614E7E",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "SessionsHandler0955C787": {
+      "DependsOn": [
+        "SessionsHandlerServiceRoleDefaultPolicyAAC4EC7E",
+        "SessionsHandlerServiceRoleD26433F9",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "bcb4be243d0ebca9feff0e2a2b1e669f9dda6e2b7b20785cb05cd33b2b5a32de.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "OPTIMIZATION_HISTORY_TABLE": {
+              "Ref": "OptimizationHistoryTable56AF5B3F",
+            },
+            "SESSIONS_TABLE": {
+              "Ref": "SessionsTable7C302024",
+            },
+          },
+        },
+        "Handler": "handler.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "SessionsHandlerServiceRoleD26433F9",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 30,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "SessionsHandlerHttpApiInvoke26F004CE": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "SessionsHandler0955C787",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:execute-api:us-east-1:123456789012:",
+              {
+                "Ref": "HttpApi",
+              },
+              "/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "SessionsHandlerServiceRoleD26433F9": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "SessionsHandlerServiceRoleDefaultPolicyAAC4EC7E": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:DescribeTable",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "SessionsTable7C302024",
+                    "Arn",
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": [
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "SessionsTable7C302024",
+                    "Arn",
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:DescribeTable",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "OptimizationHistoryTable56AF5B3F",
+                    "Arn",
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": [
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "OptimizationHistoryTable56AF5B3F",
+                    "Arn",
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "SessionsHandlerServiceRoleDefaultPolicyAAC4EC7E",
+        "Roles": [
+          {
+            "Ref": "SessionsHandlerServiceRoleD26433F9",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "SessionsIntegration": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "HttpApi",
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationUri": {
+          "Fn::GetAtt": [
+            "SessionsHandler0955C787",
+            "Arn",
+          ],
+        },
+        "PayloadFormatVersion": "2.0",
+      },
+      "Type": "AWS::ApiGatewayV2::Integration",
+    },
+    "SessionsRoute": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "HttpApi",
+        },
+        "AuthorizationType": "JWT",
+        "AuthorizerId": {
+          "Ref": "JwtAuthorizer",
+        },
+        "RouteKey": "GET /api/sessions",
+        "Target": {
+          "Fn::Join": [
+            "",
+            [
+              "integrations/",
+              {
+                "Ref": "SessionsIntegration",
+              },
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Route",
+    },
+    "SessionsTable7C302024": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "sessionId",
+            "AttributeType": "S",
+          },
+          {
+            "AttributeName": "timestamp",
+            "AttributeType": "S",
+          },
+        ],
+        "BillingMode": "PAY_PER_REQUEST",
+        "KeySchema": [
+          {
+            "AttributeName": "sessionId",
+            "KeyType": "HASH",
+          },
+          {
+            "AttributeName": "timestamp",
+            "KeyType": "RANGE",
+          },
+        ],
+        "TimeToLiveSpecification": {
+          "AttributeName": "expiresAt",
+          "Enabled": true,
+        },
+      },
+      "Type": "AWS::DynamoDB::Table",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "UploadConfirmRoute": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "HttpApi",
+        },
+        "AuthorizationType": "JWT",
+        "AuthorizerId": {
+          "Ref": "JwtAuthorizer",
+        },
+        "RouteKey": "POST /api/upload/confirm",
+        "Target": {
+          "Fn::Join": [
+            "",
+            [
+              "integrations/",
+              {
+                "Ref": "UploadIntegration",
+              },
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Route",
+    },
+    "UploadHandler4CB020C5": {
+      "DependsOn": [
+        "UploadHandlerServiceRoleDefaultPolicy63BF30CF",
+        "UploadHandlerServiceRole8CD4AA9A",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "7f39d7080f35bfbc4dc0b35e2a9a8416f0b52d06ea8eab747b23df8037db7d1b.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "DRAWINGS_BUCKET": {
+              "Ref": "DrawingsBucket74C4D09B",
+            },
+            "SESSIONS_TABLE": {
+              "Ref": "SessionsTable7C302024",
+            },
+          },
+        },
+        "Handler": "handler.handler",
+        "ReservedConcurrentExecutions": 30,
+        "Role": {
+          "Fn::GetAtt": [
+            "UploadHandlerServiceRole8CD4AA9A",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 60,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "UploadHandlerHttpApiInvoke70C56E69": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "UploadHandler4CB020C5",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:execute-api:us-east-1:123456789012:",
+              {
+                "Ref": "HttpApi",
+              },
+              "/*/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "UploadHandlerServiceRole8CD4AA9A": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "UploadHandlerServiceRoleDefaultPolicy63BF30CF": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:PutObject",
+                "s3:PutObjectLegalHold",
+                "s3:PutObjectRetention",
+                "s3:PutObjectTagging",
+                "s3:PutObjectVersionTagging",
+                "s3:Abort*",
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "DrawingsBucket74C4D09B",
+                        "Arn",
+                      ],
+                    },
+                    "/*",
+                  ],
+                ],
+              },
+            },
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:DescribeTable",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "SessionsTable7C302024",
+                    "Arn",
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": [
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "SessionsTable7C302024",
+                    "Arn",
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "bedrock-agentcore:InvokeAgentRuntime",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "OrchestratorRuntime",
+                    "AgentRuntimeArn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "OrchestratorRuntime",
+                          "AgentRuntimeArn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "UploadHandlerServiceRoleDefaultPolicy63BF30CF",
+        "Roles": [
+          {
+            "Ref": "UploadHandlerServiceRole8CD4AA9A",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "UploadIntegration": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "HttpApi",
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationUri": {
+          "Fn::GetAtt": [
+            "UploadHandler4CB020C5",
+            "Arn",
+          ],
+        },
+        "PayloadFormatVersion": "2.0",
+      },
+      "Type": "AWS::ApiGatewayV2::Integration",
+    },
+    "UploadRoute": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "HttpApi",
+        },
+        "AuthorizationType": "JWT",
+        "AuthorizerId": {
+          "Ref": "JwtAuthorizer",
+        },
+        "RouteKey": "POST /api/upload",
+        "Target": {
+          "Fn::Join": [
+            "",
+            [
+              "integrations/",
+              {
+                "Ref": "UploadIntegration",
+              },
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Route",
+    },
+    "UserPool6BA7E5F2": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "AccountRecoverySetting": {
+          "RecoveryMechanisms": [
+            {
+              "Name": "verified_phone_number",
+              "Priority": 1,
+            },
+            {
+              "Name": "verified_email",
+              "Priority": 2,
+            },
+          ],
+        },
+        "AdminCreateUserConfig": {
+          "AllowAdminCreateUserOnly": false,
+        },
+        "AutoVerifiedAttributes": [
+          "email",
+        ],
+        "EmailVerificationMessage": "The verification code to your new account is {####}",
+        "EmailVerificationSubject": "Verify your new account",
+        "Policies": {
+          "PasswordPolicy": {
+            "MinimumLength": 8,
+            "RequireLowercase": true,
+            "RequireNumbers": true,
+            "RequireSymbols": true,
+            "RequireUppercase": true,
+          },
+        },
+        "SmsVerificationMessage": "The verification code to your new account is {####}",
+        "UsernameAttributes": [
+          "email",
+        ],
+        "VerificationMessageTemplate": {
+          "DefaultEmailOption": "CONFIRM_WITH_CODE",
+          "EmailMessage": "The verification code to your new account is {####}",
+          "EmailSubject": "Verify your new account",
+          "SmsMessage": "The verification code to your new account is {####}",
+        },
+      },
+      "Type": "AWS::Cognito::UserPool",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "UserPoolClient2F5918F7": {
+      "Properties": {
+        "AccessTokenValidity": 60,
+        "AllowedOAuthFlows": [
+          "implicit",
+          "code",
+        ],
+        "AllowedOAuthFlowsUserPoolClient": true,
+        "AllowedOAuthScopes": [
+          "profile",
+          "phone",
+          "email",
+          "openid",
+          "aws.cognito.signin.user.admin",
+        ],
+        "CallbackURLs": [
+          "https://example.com",
+        ],
+        "ExplicitAuthFlows": [
+          "ALLOW_USER_PASSWORD_AUTH",
+          "ALLOW_USER_SRP_AUTH",
+          "ALLOW_REFRESH_TOKEN_AUTH",
+        ],
+        "RefreshTokenValidity": 43200,
+        "SupportedIdentityProviders": [
+          "COGNITO",
+        ],
+        "TokenValidityUnits": {
+          "AccessToken": "minutes",
+          "RefreshToken": "minutes",
+        },
+        "UserPoolId": {
+          "Ref": "UserPool6BA7E5F2",
+        },
+      },
+      "Type": "AWS::Cognito::UserPoolClient",
+    },
+    "VisionZoomToolTarget7A98DAC1": {
+      "DependsOn": [
+        "VisionZoomToolTargetServiceRoleDefaultPolicy7762CDAD",
+        "VisionZoomToolTargetServiceRole80990370",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "c82845dea24945c7c6bb6438194d62ae380ecdfb7d19c78a5c236488cbf02918.zip",
+        },
+        "Handler": "handler.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "VisionZoomToolTargetServiceRole80990370",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 120,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "VisionZoomToolTargetServiceRole80990370": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "VisionZoomToolTargetServiceRoleDefaultPolicy7762CDAD": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "DrawingsBucket74C4D09B",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "DrawingsBucket74C4D09B",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "VisionZoomToolTargetServiceRoleDefaultPolicy7762CDAD",
+        "Roles": [
+          {
+            "Ref": "VisionZoomToolTargetServiceRole80990370",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "WebSocketApi": {
+      "Properties": {
+        "Name": "cae-platform-ws-dev",
+        "ProtocolType": "WEBSOCKET",
+        "RouteSelectionExpression": "$request.body.action",
+      },
+      "Type": "AWS::ApiGatewayV2::Api",
+    },
+    "WebSocketAuthorizer": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "WebSocketApi",
+        },
+        "AuthorizerType": "REQUEST",
+        "AuthorizerUri": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+              {
+                "Fn::GetAtt": [
+                  "WebSocketAuthorizerHandler85A19A38",
+                  "Arn",
+                ],
+              },
+              "/invocations",
+            ],
+          ],
+        },
+        "IdentitySource": [
+          "route.request.querystring.token",
+        ],
+        "Name": "CognitoWebSocketAuthorizer",
+      },
+      "Type": "AWS::ApiGatewayV2::Authorizer",
+    },
+    "WebSocketAuthorizerHandler85A19A38": {
+      "DependsOn": [
+        "WebSocketAuthorizerHandlerServiceRole2E806E1D",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "7a27b1dc250afd2a8b57ec671f70c1db7a7551f571596fcd7c6594528f02377b.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "APP_CLIENT_ID": {
+              "Ref": "UserPoolClient2F5918F7",
+            },
+            "USER_POOL_ID": {
+              "Ref": "UserPool6BA7E5F2",
+            },
+          },
+        },
+        "Handler": "handler.authorizer_handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "WebSocketAuthorizerHandlerServiceRole2E806E1D",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 10,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "WebSocketAuthorizerHandlerServiceRole2E806E1D": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "WebSocketAuthorizerHandlerWsApiAuthorizerInvoke297A0113": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "WebSocketAuthorizerHandler85A19A38",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:execute-api:us-east-1:123456789012:",
+              {
+                "Ref": "WebSocketApi",
+              },
+              "/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "WebSocketConnectHandler3316DFBA": {
+      "DependsOn": [
+        "WebSocketConnectHandlerServiceRoleDefaultPolicyC801F5F7",
+        "WebSocketConnectHandlerServiceRole9B0CB972",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "7a27b1dc250afd2a8b57ec671f70c1db7a7551f571596fcd7c6594528f02377b.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "CONNECTIONS_TABLE": {
+              "Ref": "ConnectionsTable8000B8A1",
+            },
+          },
+        },
+        "Handler": "handler.connect_handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "WebSocketConnectHandlerServiceRole9B0CB972",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 10,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "WebSocketConnectHandlerServiceRole9B0CB972": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "WebSocketConnectHandlerServiceRoleDefaultPolicyC801F5F7": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:DescribeTable",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ConnectionsTable8000B8A1",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ConnectionsTable8000B8A1",
+                          "Arn",
+                        ],
+                      },
+                      "/index/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": [
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ConnectionsTable8000B8A1",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ConnectionsTable8000B8A1",
+                          "Arn",
+                        ],
+                      },
+                      "/index/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "WebSocketConnectHandlerServiceRoleDefaultPolicyC801F5F7",
+        "Roles": [
+          {
+            "Ref": "WebSocketConnectHandlerServiceRole9B0CB972",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "WebSocketConnectHandlerWsApiConnectInvokeF8D47F72": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "WebSocketConnectHandler3316DFBA",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:execute-api:us-east-1:123456789012:",
+              {
+                "Ref": "WebSocketApi",
+              },
+              "/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "WebSocketDisconnectHandlerD09D008B": {
+      "DependsOn": [
+        "WebSocketDisconnectHandlerServiceRoleDefaultPolicy38B2FA46",
+        "WebSocketDisconnectHandlerServiceRole71ECA331",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "7a27b1dc250afd2a8b57ec671f70c1db7a7551f571596fcd7c6594528f02377b.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "CONNECTIONS_TABLE": {
+              "Ref": "ConnectionsTable8000B8A1",
+            },
+          },
+        },
+        "Handler": "handler.disconnect_handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "WebSocketDisconnectHandlerServiceRole71ECA331",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 10,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "WebSocketDisconnectHandlerServiceRole71ECA331": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "WebSocketDisconnectHandlerServiceRoleDefaultPolicy38B2FA46": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:DescribeTable",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ConnectionsTable8000B8A1",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ConnectionsTable8000B8A1",
+                          "Arn",
+                        ],
+                      },
+                      "/index/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": [
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ConnectionsTable8000B8A1",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ConnectionsTable8000B8A1",
+                          "Arn",
+                        ],
+                      },
+                      "/index/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "WebSocketDisconnectHandlerServiceRoleDefaultPolicy38B2FA46",
+        "Roles": [
+          {
+            "Ref": "WebSocketDisconnectHandlerServiceRole71ECA331",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "WebSocketDisconnectHandlerWsApiDisconnectInvoke1EEA1EE2": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "WebSocketDisconnectHandlerD09D008B",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:execute-api:us-east-1:123456789012:",
+              {
+                "Ref": "WebSocketApi",
+              },
+              "/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "WebSocketMessageHandler3F36AF15": {
+      "DependsOn": [
+        "WebSocketMessageHandlerServiceRoleDefaultPolicy822DCC85",
+        "WebSocketMessageHandlerServiceRole64F7A975",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-east-1",
+          "S3Key": "7a27b1dc250afd2a8b57ec671f70c1db7a7551f571596fcd7c6594528f02377b.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "CONNECTIONS_TABLE": {
+              "Ref": "ConnectionsTable8000B8A1",
+            },
+            "EXTRACTION_RUNTIME_ARN": {
+              "Fn::GetAtt": [
+                "ExtractionRuntime",
+                "AgentRuntimeArn",
+              ],
+            },
+            "OPTIMIZATION_HISTORY_TABLE": {
+              "Ref": "OptimizationHistoryTable56AF5B3F",
+            },
+            "OPTIMIZER_RUNTIME_ARN": {
+              "Fn::GetAtt": [
+                "OptimizerRuntime",
+                "AgentRuntimeArn",
+              ],
+            },
+            "ORCHESTRATOR_RUNTIME_ARN": {
+              "Fn::GetAtt": [
+                "OrchestratorRuntime",
+                "AgentRuntimeArn",
+              ],
+            },
+            "QA_RUNTIME_ARN": {
+              "Fn::GetAtt": [
+                "QaRuntime",
+                "AgentRuntimeArn",
+              ],
+            },
+          },
+        },
+        "Handler": "handler.message_handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "WebSocketMessageHandlerServiceRole64F7A975",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.13",
+        "Timeout": 300,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "WebSocketMessageHandlerServiceRole64F7A975": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "WebSocketMessageHandlerServiceRoleDefaultPolicy822DCC85": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:DescribeTable",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ConnectionsTable8000B8A1",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ConnectionsTable8000B8A1",
+                          "Arn",
+                        ],
+                      },
+                      "/index/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": [
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ConnectionsTable8000B8A1",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ConnectionsTable8000B8A1",
+                          "Arn",
+                        ],
+                      },
+                      "/index/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": [
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:DescribeTable",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "OptimizationHistoryTable56AF5B3F",
+                    "Arn",
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "bedrock-agentcore:InvokeAgentRuntime",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "OrchestratorRuntime",
+                    "AgentRuntimeArn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "OrchestratorRuntime",
+                          "AgentRuntimeArn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+                {
+                  "Fn::GetAtt": [
+                    "ExtractionRuntime",
+                    "AgentRuntimeArn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ExtractionRuntime",
+                          "AgentRuntimeArn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+                {
+                  "Fn::GetAtt": [
+                    "QaRuntime",
+                    "AgentRuntimeArn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "QaRuntime",
+                          "AgentRuntimeArn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+                {
+                  "Fn::GetAtt": [
+                    "OptimizerRuntime",
+                    "AgentRuntimeArn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "OptimizerRuntime",
+                          "AgentRuntimeArn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "execute-api:ManageConnections",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:aws:execute-api:us-east-1:123456789012:",
+                    {
+                      "Ref": "WebSocketApi",
+                    },
+                    "/dev/POST/@connections/*",
+                  ],
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "WebSocketMessageHandlerServiceRoleDefaultPolicy822DCC85",
+        "Roles": [
+          {
+            "Ref": "WebSocketMessageHandlerServiceRole64F7A975",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "WebSocketMessageHandlerWsApiMessageInvoke35BCA6A4": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "WebSocketMessageHandler3F36AF15",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:execute-api:us-east-1:123456789012:",
+              {
+                "Ref": "WebSocketApi",
+              },
+              "/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "WorkloadIdentity": {
+      "Properties": {
+        "Name": "cae-platform-agents",
+      },
+      "Type": "AWS::BedrockAgentCore::WorkloadIdentity",
+    },
+    "WsApiStage": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "WebSocketApi",
+        },
+        "AutoDeploy": true,
+        "StageName": "dev",
+      },
+      "Type": "AWS::ApiGatewayV2::Stage",
+    },
+    "WsConnectIntegration": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "WebSocketApi",
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationUri": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+              {
+                "Fn::GetAtt": [
+                  "WebSocketConnectHandler3316DFBA",
+                  "Arn",
+                ],
+              },
+              "/invocations",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Integration",
+    },
+    "WsConnectRoute": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "WebSocketApi",
+        },
+        "AuthorizationType": "CUSTOM",
+        "AuthorizerId": {
+          "Ref": "WebSocketAuthorizer",
+        },
+        "RouteKey": "$connect",
+        "Target": {
+          "Fn::Join": [
+            "",
+            [
+              "integrations/",
+              {
+                "Ref": "WsConnectIntegration",
+              },
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Route",
+    },
+    "WsDefaultRoute": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "WebSocketApi",
+        },
+        "RouteKey": "$default",
+        "Target": {
+          "Fn::Join": [
+            "",
+            [
+              "integrations/",
+              {
+                "Ref": "WsMessageIntegration",
+              },
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Route",
+    },
+    "WsDisconnectIntegration": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "WebSocketApi",
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationUri": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+              {
+                "Fn::GetAtt": [
+                  "WebSocketDisconnectHandlerD09D008B",
+                  "Arn",
+                ],
+              },
+              "/invocations",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Integration",
+    },
+    "WsDisconnectRoute": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "WebSocketApi",
+        },
+        "RouteKey": "$disconnect",
+        "Target": {
+          "Fn::Join": [
+            "",
+            [
+              "integrations/",
+              {
+                "Ref": "WsDisconnectIntegration",
+              },
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Route",
+    },
+    "WsMessageIntegration": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "WebSocketApi",
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationUri": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+              {
+                "Fn::GetAtt": [
+                  "WebSocketMessageHandler3F36AF15",
+                  "Arn",
+                ],
+              },
+              "/invocations",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Integration",
+    },
+    "WsSendMessageRoute": {
+      "Properties": {
+        "ApiId": {
+          "Ref": "WebSocketApi",
+        },
+        "RouteKey": "sendmessage",
+        "Target": {
+          "Fn::Join": [
+            "",
+            [
+              "integrations/",
+              {
+                "Ref": "WsMessageIntegration",
+              },
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Route",
+    },
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;

@@ -1,0 +1,264 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "drawing_id",
+    "extraction_timestamp",
+    "title_block",
+    "bom",
+    "gdt_callouts",
+    "dimensions",
+    "notes",
+    "revisions"
+  ],
+  "properties": {
+    "drawing_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "extraction_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "title_block": {
+      "type": "object",
+      "required": [
+        "drawing_number",
+        "title",
+        "part_number",
+        "revision",
+        "material",
+        "units",
+        "scale",
+        "projection",
+        "sheet_size",
+        "general_tolerance",
+        "drawn_by",
+        "date",
+        "approved_by",
+        "weight"
+      ],
+      "properties": {
+        "drawing_number": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "part_number": {
+          "type": "string"
+        },
+        "revision": {
+          "type": "string"
+        },
+        "material": {
+          "type": "string"
+        },
+        "units": {
+          "type": "string"
+        },
+        "scale": {
+          "type": "string"
+        },
+        "projection": {
+          "type": "string",
+          "enum": [
+            "first_angle",
+            "third_angle"
+          ]
+        },
+        "sheet_size": {
+          "type": "string"
+        },
+        "general_tolerance": {
+          "type": "string"
+        },
+        "drawn_by": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "approved_by": {
+          "type": "string"
+        },
+        "weight": {
+          "type": "string"
+        }
+      }
+    },
+    "bom": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "item",
+          "part_number",
+          "description",
+          "material",
+          "qty"
+        ],
+        "properties": {
+          "item": {
+            "type": "integer"
+          },
+          "part_number": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "material": {
+            "type": "string"
+          },
+          "qty": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "gdt_callouts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "spec_id",
+          "characteristic",
+          "tolerance_value",
+          "unit",
+          "zone_shape",
+          "modifier",
+          "datum_refs",
+          "applied_to"
+        ],
+        "properties": {
+          "spec_id": {
+            "type": "string"
+          },
+          "characteristic": {
+            "type": "string"
+          },
+          "tolerance_value": {
+            "type": "number"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "zone_shape": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "modifier": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "datum_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "applied_to": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "value",
+          "tolerance",
+          "type",
+          "feature"
+        ],
+        "properties": {
+          "value": {
+            "type": "number"
+          },
+          "tolerance": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "linear",
+              "diameter",
+              "radius",
+              "angular"
+            ]
+          },
+          "feature": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "note_id",
+          "text",
+          "type"
+        ],
+        "properties": {
+          "note_id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "revisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "rev",
+          "date",
+          "description",
+          "approved_by"
+        ],
+        "properties": {
+          "rev": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "approved_by": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "confidence_scores": {
+      "type": "object",
+      "description": "Per-field confidence from extraction (0.0-1.0)",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    }
+  }
+}

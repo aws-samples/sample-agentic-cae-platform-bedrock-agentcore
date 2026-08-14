@@ -1,0 +1,27 @@
+# Keep the AgentCore Runtime image build context (repo root) small and
+# deterministic. Only shared/ and agents/ are needed by the image; everything
+# below is excluded so it does not bloat the context or perturb the asset hash.
+.git
+**/node_modules
+**/__pycache__
+**/*.pyc
+.venv
+venv
+.hypothesis
+.pytest_cache
+.ruff_cache
+.mypy_cache
+
+# Infra / frontend build artifacts and sources not needed by the agent images.
+infra
+frontend
+tests
+cdk.out
+**/cdk.out
+dist
+build
+
+# Local env / editor files.
+.env
+.env.*
+.DS_Store

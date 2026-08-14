@@ -1,0 +1,102 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+# But don't ignore infra/lib/ (CDK source)
+!infra/lib/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+.venv/
+venv/
+ENV/
+
+# Node / TypeScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# CDK
+infra/cdk.out/
+infra/*.js
+infra/*.d.ts
+!infra/jest.config.js
+infra/cdk-outputs.json
+
+# Deploy/build logs (contain account-specific details)
+*.log
+
+# Frontend build
+frontend/dist/
+frontend/.vite/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+coverage/
+
+# Distribution
+*.tar.gz
+*.whl
+
+# CDK Context
+infra/cdk.context.json
+.kiro/specs/_archive/
+
+# Submission/demo artifacts (not part of the published sample)
+submission/
+*.heic
+*.mov
+
+# Working directories (not part of the published sample)
+new/
+
+# Diagram source (PNG is committed for rendering in README)
+docs/*.drawio
